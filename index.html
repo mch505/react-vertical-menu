@@ -4,32 +4,52 @@
     <meta charset="UTF-8">
     <title>Vertical Menu</title>
     <link rel="stylesheet" href="css/vertical-menu.css"/>
+    <script src="http://fb.me/react-0.12.1.min.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
 </head>
 <body>
-    <div class="menu-wrapper">
-        <div class="menu-header">
-            <img src="img/logo.png" alt=""/>
-        </div>
-        <div class="expand">
-            <a class="expand-button" href="">>></a>
-        </div>
-        <div class="btn" style="background:#A285C5;">
+    <script type="text/jsx">
+        /*** @jsx React.DOM */
+        var app =
+                React.createClass({
+                    render: function(){
+                        return(
+                                <VertMenu></VertMenu>
+                        )
+                    }
 
-        </div>
-        <div class="btn" style="background: #666981;">
+                });
+        var VertMenu=
+        React.createClass({
+            render: function(){
+                return(
+                        <div className="menu-wrapper">
+                            <div className="menu-header">
+                                <img src="img/logo.png" alt=""/>
+                            </div>
+                            <div className="expand">
+                                <a className="expand-button" href="">expand</a>
+                            </div>
+                            <div className="btn" style="background:#A285C5;">
 
-        </div>
-        <div class="btn" style="background: #E17695;">
+                            </div>
+                            <div className="btn" style="background: #666981;">
 
-        </div>
-        <div class="btn">
+                            </div>
+                            <div className="btn" style="background: #E17695;">
 
-        </div>
-        <div class="btn">
+                            </div>
+                            <div className="btn">
 
-        </div>
-    </div>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="js/vertical-menu.js"></script>
+                            </div>
+                            <div className="btn">
+
+                            </div>
+                        </div>
+                )
+            }
+        });
+        React.renderComponent(<app/>,document.body)
+    </script>
 </body>
 </html>
